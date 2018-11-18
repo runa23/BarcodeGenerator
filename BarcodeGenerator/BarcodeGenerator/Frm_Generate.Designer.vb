@@ -22,10 +22,15 @@ Partial Class Frm_Generate
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.DgAsset = New System.Windows.Forms.DataGridView()
         Me.BtnLoad = New System.Windows.Forms.Button()
+        Me.BarcodeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.BtnGenerate = New System.Windows.Forms.Button()
+        Me.BtnClear = New System.Windows.Forms.Button()
+        Me.BtnKeluar = New System.Windows.Forms.Button()
         CType(Me.DgAsset, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarcodeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DgAsset
@@ -39,7 +44,7 @@ Partial Class Frm_Generate
         Me.DgAsset.Location = New System.Drawing.Point(12, 55)
         Me.DgAsset.Name = "DgAsset"
         Me.DgAsset.ReadOnly = True
-        Me.DgAsset.Size = New System.Drawing.Size(436, 488)
+        Me.DgAsset.Size = New System.Drawing.Size(350, 488)
         Me.DgAsset.TabIndex = 0
         '
         'BtnLoad
@@ -53,29 +58,53 @@ Partial Class Frm_Generate
         '
         'BtnGenerate
         '
-        Me.BtnGenerate.Location = New System.Drawing.Point(106, 12)
+        Me.BtnGenerate.Location = New System.Drawing.Point(93, 12)
         Me.BtnGenerate.Name = "BtnGenerate"
         Me.BtnGenerate.Size = New System.Drawing.Size(75, 37)
-        Me.BtnGenerate.TabIndex = 1
+        Me.BtnGenerate.TabIndex = 2
         Me.BtnGenerate.Text = "Generate"
         Me.BtnGenerate.UseVisualStyleBackColor = True
+        '
+        'BtnClear
+        '
+        Me.BtnClear.Location = New System.Drawing.Point(174, 12)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(75, 37)
+        Me.BtnClear.TabIndex = 3
+        Me.BtnClear.Text = "Clear"
+        Me.BtnClear.UseVisualStyleBackColor = True
+        '
+        'BtnKeluar
+        '
+        Me.BtnKeluar.Location = New System.Drawing.Point(255, 12)
+        Me.BtnKeluar.Name = "BtnKeluar"
+        Me.BtnKeluar.Size = New System.Drawing.Size(75, 37)
+        Me.BtnKeluar.TabIndex = 4
+        Me.BtnKeluar.Text = "Keluar"
+        Me.BtnKeluar.UseVisualStyleBackColor = True
         '
         'Frm_Generate
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(460, 555)
+        Me.ClientSize = New System.Drawing.Size(374, 555)
+        Me.Controls.Add(Me.BtnKeluar)
+        Me.Controls.Add(Me.BtnClear)
         Me.Controls.Add(Me.BtnGenerate)
         Me.Controls.Add(Me.BtnLoad)
         Me.Controls.Add(Me.DgAsset)
         Me.Name = "Frm_Generate"
         Me.Text = "Generate"
         CType(Me.DgAsset, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarcodeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents DgAsset As System.Windows.Forms.DataGridView
     Friend WithEvents BtnLoad As System.Windows.Forms.Button
+    Friend WithEvents BarcodeBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents BtnGenerate As System.Windows.Forms.Button
+    Friend WithEvents BtnClear As System.Windows.Forms.Button
+    Friend WithEvents BtnKeluar As System.Windows.Forms.Button
 
 End Class
