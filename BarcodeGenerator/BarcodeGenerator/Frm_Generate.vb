@@ -1,7 +1,12 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports DevExpress.DataAccess.Excel
+Imports DevExpress.XtraReports.UI
+Imports DevExpress.XtraReports.Configuration
+
 Public Class Frm_Generate
     Public kode As String
+    Public path As String
     Private Sub Frm_Generate_Load(sender As Object, e As EventArgs) Handles Me.Load
         OpenConn()
     End Sub
@@ -10,6 +15,7 @@ Public Class Frm_Generate
         Dim MyConn As System.Data.OleDb.OleDbConnection
         Dim DTSet As System.Data.DataSet
         Dim Cmd As System.Data.OleDb.OleDbDataAdapter
+
 
         Dim browse As New OpenFileDialog
         With browse
@@ -20,6 +26,8 @@ Public Class Frm_Generate
 
         If browse.ShowDialog() = Windows.Forms.DialogResult.OK Then
             Dim name As String
+
+            path = System.IO.Path.GetFullPath(browse.FileName)
             name = browse.FileName
             MyConn = New System.Data.OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source='" & name & " '; " & "Extended Properties=""Excel 8.0;HDR=YES;IMEX=1""")
             Cmd = New System.Data.OleDb.OleDbDataAdapter("select barcode,model,ukuran from [Aset$]", MyConn)
@@ -27,32 +35,30 @@ Public Class Frm_Generate
             DTSet = New DataSet
             Cmd.Fill(DTSet)
             DgAsset.DataSource = DTSet.Tables(0)
+
             MyConn.Close()
         End If
     End Sub
 
     Private Sub BtnGenerate_Click(sender As Object, e As EventArgs) Handles BtnGenerate.Click
-        Dim dt As New DataTable
-        Dim ds As New DataSet
+        Dim report As New XtraReport1
+        Dim excelDataSource As New ExcelDataSource
+        Dim excelWorksheet As New ExcelWorksheetSettings
+        Dim excelSourceOptions As New ExcelSourceOptions
+        Dim detailband As New DetailBand
 
-        With dt
-            .Columns.Add("Barcode")
-            .Columns.Add("Model")
-            .Columns.Add("Ukuran")
-        End With
+        excelDataSource.FileName = path
+        excelWorksheet.WorksheetName = "Aset"
+        excelSourceOptions.ImportSettings = excelWorksheet
+        excelSourceOptions.SkipHiddenColumns = True
+        excelSourceOptions.SkipHiddenRows = True
+        excelDataSource.SourceOptions = excelSourceOptions
 
-        For Each dr As DataGridViewRow In DgAsset.Rows
-            dt.Rows.Add(dr.Cells(0).Value, dr.Cells(1).Value, dr.Cells(2).Value)
-            If kode = "" Then
-                kode = dr.Cells(0).Value
-            Else
-                kode = kode & "," & dr.Cells(0).Value
-            End If
+        
 
-        Next
+        report.DataSource = excelDataSource
 
-        FrmLapBarcode.Show()
-
+        report.ShowPreview()
     End Sub
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click

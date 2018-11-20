@@ -24,11 +24,11 @@ Partial Class Frm_Generate
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.DgAsset = New System.Windows.Forms.DataGridView()
+        Me.BtnKeluar = New System.Windows.Forms.Button()
+        Me.BtnClear = New System.Windows.Forms.Button()
+        Me.BtnGenerate = New System.Windows.Forms.Button()
         Me.BtnLoad = New System.Windows.Forms.Button()
         Me.BarcodeBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.BtnGenerate = New System.Windows.Forms.Button()
-        Me.BtnClear = New System.Windows.Forms.Button()
-        Me.BtnKeluar = New System.Windows.Forms.Button()
         CType(Me.DgAsset, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BarcodeBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,47 +41,55 @@ Partial Class Frm_Generate
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DgAsset.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgAsset.Location = New System.Drawing.Point(12, 55)
+        Me.DgAsset.Location = New System.Drawing.Point(12, 85)
         Me.DgAsset.Name = "DgAsset"
         Me.DgAsset.ReadOnly = True
-        Me.DgAsset.Size = New System.Drawing.Size(350, 488)
+        Me.DgAsset.Size = New System.Drawing.Size(350, 458)
         Me.DgAsset.TabIndex = 0
-        '
-        'BtnLoad
-        '
-        Me.BtnLoad.Location = New System.Drawing.Point(12, 12)
-        Me.BtnLoad.Name = "BtnLoad"
-        Me.BtnLoad.Size = New System.Drawing.Size(75, 37)
-        Me.BtnLoad.TabIndex = 1
-        Me.BtnLoad.Text = "Load"
-        Me.BtnLoad.UseVisualStyleBackColor = True
-        '
-        'BtnGenerate
-        '
-        Me.BtnGenerate.Location = New System.Drawing.Point(93, 12)
-        Me.BtnGenerate.Name = "BtnGenerate"
-        Me.BtnGenerate.Size = New System.Drawing.Size(75, 37)
-        Me.BtnGenerate.TabIndex = 2
-        Me.BtnGenerate.Text = "Generate"
-        Me.BtnGenerate.UseVisualStyleBackColor = True
-        '
-        'BtnClear
-        '
-        Me.BtnClear.Location = New System.Drawing.Point(174, 12)
-        Me.BtnClear.Name = "BtnClear"
-        Me.BtnClear.Size = New System.Drawing.Size(75, 37)
-        Me.BtnClear.TabIndex = 3
-        Me.BtnClear.Text = "Clear"
-        Me.BtnClear.UseVisualStyleBackColor = True
         '
         'BtnKeluar
         '
-        Me.BtnKeluar.Location = New System.Drawing.Point(255, 12)
+        Me.BtnKeluar.Image = Global.BarcodeGenerator.My.Resources.Resources._Exit
+        Me.BtnKeluar.Location = New System.Drawing.Point(269, 21)
         Me.BtnKeluar.Name = "BtnKeluar"
-        Me.BtnKeluar.Size = New System.Drawing.Size(75, 37)
+        Me.BtnKeluar.Size = New System.Drawing.Size(75, 58)
         Me.BtnKeluar.TabIndex = 4
         Me.BtnKeluar.Text = "Keluar"
+        Me.BtnKeluar.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.BtnKeluar.UseVisualStyleBackColor = True
+        '
+        'BtnClear
+        '
+        Me.BtnClear.Image = Global.BarcodeGenerator.My.Resources.Resources.Clear
+        Me.BtnClear.Location = New System.Drawing.Point(188, 21)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(75, 58)
+        Me.BtnClear.TabIndex = 3
+        Me.BtnClear.Text = "Clear"
+        Me.BtnClear.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnClear.UseVisualStyleBackColor = True
+        '
+        'BtnGenerate
+        '
+        Me.BtnGenerate.Image = Global.BarcodeGenerator.My.Resources.Resources.Generate2
+        Me.BtnGenerate.Location = New System.Drawing.Point(107, 21)
+        Me.BtnGenerate.Name = "BtnGenerate"
+        Me.BtnGenerate.Size = New System.Drawing.Size(75, 58)
+        Me.BtnGenerate.TabIndex = 2
+        Me.BtnGenerate.Text = "Generate"
+        Me.BtnGenerate.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnGenerate.UseVisualStyleBackColor = True
+        '
+        'BtnLoad
+        '
+        Me.BtnLoad.Image = Global.BarcodeGenerator.My.Resources.Resources.Load
+        Me.BtnLoad.Location = New System.Drawing.Point(26, 21)
+        Me.BtnLoad.Name = "BtnLoad"
+        Me.BtnLoad.Size = New System.Drawing.Size(75, 58)
+        Me.BtnLoad.TabIndex = 1
+        Me.BtnLoad.Text = "Load"
+        Me.BtnLoad.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.BtnLoad.UseVisualStyleBackColor = True
         '
         'Frm_Generate
         '
@@ -94,7 +102,7 @@ Partial Class Frm_Generate
         Me.Controls.Add(Me.BtnLoad)
         Me.Controls.Add(Me.DgAsset)
         Me.Name = "Frm_Generate"
-        Me.Text = "Generate"
+        Me.Text = "Generate Barcode"
         CType(Me.DgAsset, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BarcodeBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
