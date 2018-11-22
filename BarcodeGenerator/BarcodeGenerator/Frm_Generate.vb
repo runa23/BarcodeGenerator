@@ -9,6 +9,8 @@ Public Class Frm_Generate
     Public path As String
     Private Sub Frm_Generate_Load(sender As Object, e As EventArgs) Handles Me.Load
         OpenConn()
+        BtnGenerate.Enabled = False
+        BtnClear.Enabled = False
     End Sub
 
     Private Sub BtnLoad_Click(sender As Object, e As EventArgs) Handles BtnLoad.Click
@@ -38,6 +40,10 @@ Public Class Frm_Generate
 
             MyConn.Close()
         End If
+
+        BtnGenerate.Enabled = True
+        BtnClear.Enabled = True
+        BtnLoad.Enabled = False
     End Sub
 
     Private Sub BtnGenerate_Click(sender As Object, e As EventArgs) Handles BtnGenerate.Click
@@ -54,14 +60,20 @@ Public Class Frm_Generate
         excelSourceOptions.SkipHiddenRows = True
         excelDataSource.SourceOptions = excelSourceOptions
 
-        
-
         report.DataSource = excelDataSource
 
         report.ShowPreview()
+
     End Sub
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         DgAsset.DataSource = Nothing
+        BtnGenerate.Enabled = False
+        BtnClear.Enabled = False
+        BtnLoad.Enabled = True
+    End Sub
+
+    Private Sub BtnKeluar_Click(sender As Object, e As EventArgs) Handles BtnKeluar.Click
+        Application.Exit()
     End Sub
 End Class

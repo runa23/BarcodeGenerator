@@ -45,7 +45,7 @@ Partial Class Frm_Generate
         Me.DgAsset.Name = "DgAsset"
         Me.DgAsset.ReadOnly = True
         Me.DgAsset.Size = New System.Drawing.Size(350, 458)
-        Me.DgAsset.TabIndex = 0
+        Me.DgAsset.TabIndex = 5
         '
         'BtnKeluar
         '

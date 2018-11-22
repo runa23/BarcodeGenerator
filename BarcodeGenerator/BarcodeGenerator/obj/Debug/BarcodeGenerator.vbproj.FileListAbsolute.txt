@@ -1,14 +1,18 @@
 C:\Users\septh\AppData\Local\Temporary Projects\BarcodeGenerator\bin\Debug\BarcodeGenerator.exe.config
-D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.exe
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.exe.config
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.exe
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.pdb
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.xml
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.vbprojResolveAssemblyReference.cache
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.Frm_Generate.resources
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.Resources.resources
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.XtraReport1.resources
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.vbproj.GenerateResource.Cache
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.exe.licenses
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.exe
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.xml
 D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.pdb
-D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.pdb
-D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.xml
-D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.vbprojResolveAssemblyReference.cache
-D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.XtraReport1.resources
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.exe.manifest
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\bin\Debug\BarcodeGenerator.application
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.exe.manifest
+D:\Repo\BarcodeGenerator\BarcodeGenerator\BarcodeGenerator\obj\Debug\BarcodeGenerator.application
