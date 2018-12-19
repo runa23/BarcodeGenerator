@@ -8,7 +8,7 @@ Public Class Frm_Generate
     Public kode As String
     Public path As String
     Private Sub Frm_Generate_Load(sender As Object, e As EventArgs) Handles Me.Load
-        OpenConn()
+        'OpenConn()
         BtnGenerate.Enabled = False
         BtnClear.Enabled = False
     End Sub
@@ -32,13 +32,21 @@ Public Class Frm_Generate
             path = System.IO.Path.GetFullPath(browse.FileName)
             name = browse.FileName
             MyConn = New System.Data.OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source='" & name & " '; " & "Extended Properties=""Excel 8.0;HDR=YES;IMEX=1""")
-            Cmd = New System.Data.OleDb.OleDbDataAdapter("select barcode,model,ukuran from [Aset$]", MyConn)
+            Cmd = New System.Data.OleDb.OleDbDataAdapter("select barcode,Model,Ukuran from [Aset$]", MyConn)
             Cmd.TableMappings.Add("Table", "Aset")
             DTSet = New DataSet
             Cmd.Fill(DTSet)
             DgAsset.DataSource = DTSet.Tables(0)
 
             MyConn.Close()
+
+            BtnGenerate.Enabled = True
+            BtnClear.Enabled = True
+            BtnLoad.Enabled = False
+        Else
+            BtnGenerate.Enabled = False
+            BtnClear.Enabled = False
+            BtnLoad.Enabled = True
         End If
 
         BtnGenerate.Enabled = True
